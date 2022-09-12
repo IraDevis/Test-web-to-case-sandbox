@@ -12,13 +12,13 @@
 <!--  If necessary, please modify the charset parameter to specify the        -->
 <!--  character set of your HTML page.                                        -->
 <!--  ----------------------------------------------------------------------  -->
-
+<!--
 <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
 
 <!--  ----------------------------------------------------------------------  -->
 <!--  NOTE: Please add the following <FORM> element to your page.             -->
 <!--  ----------------------------------------------------------------------  -->
-
+<!--
 <form action="https://charitableorganizationcharitablefu--nixdev.sandbox.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
 
 <input type=hidden name="orgid" value="00D8E0000009eci">
@@ -31,7 +31,7 @@
 <!--  <input type="hidden" name="debugEmail"                                  -->
 <!--  value="alesia.azarova@280days.org">                                     -->
 <!--  ----------------------------------------------------------------------  -->
-
+<!--
 <label for="recordType">Тип запиту</label><select  id="recordType" name="recordType"><option value="">--None--</option><option value="0128E0000021LdT">Запит пологового будинку</option>
 <option value="0128E0000021LdY">Запит адресний</option>
 </select><br>
@@ -62,7 +62,24 @@
 
 <input type="submit" name="submit">
 
-</form>
+</form> -->
 
+<script src="https://charitableorganizationcharitablefu--nixdev.sandbox.my.salesforce-sites.com/lightning/lightning.out.js"></script>
+
+<div id="lightningLocator"></div>
+
+<script>
+    $Lightning.use("c:embedFlowInExternalWebsiteApp",
+        function() {
+            $Lightning.createComponent(
+                "c:embedFlowInExternalWebsite",
+                { },                  
+                "lightningLocator",   
+                function(cmp) {}
+            );
+        },
+        'https://charitableorganizationcharitablefu--nixdev.sandbox.my.salesforce-sites.com'
+    );
+</script>
   </body>
 </html>
